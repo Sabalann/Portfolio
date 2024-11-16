@@ -75,20 +75,46 @@ button {
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 6px 20px 8px rgba(0, 0, 0, 0.19);
+  border: rgba(255, 255, 255, 0.49) 2px solid;
+  transition: 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 .card::after {
   position: absolute;
-  background-color: #535bf2;
+  background: conic-gradient(from var(--angle), transparent 70%, #00afe6);
   content: "";
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
   transform: scale(1.03);
+  translate: -50% -50%;
   border-radius: 8px;
   z-index: -1;
+  padding: 3px;
+  animation: 7s spin linear infinite;
 }
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
 
 .card p:not(.heading) {
   font-size: 14px;
