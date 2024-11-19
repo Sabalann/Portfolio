@@ -1,1 +1,1 @@
-This is the repo for my portfolio website, created using Reactjs
+This is my portfolio, where I will be showcasing my projects and skills.

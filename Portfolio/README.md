@@ -1,1 +1,0 @@
-This is my portfolio, where I will be showcasing my projects and skills.
