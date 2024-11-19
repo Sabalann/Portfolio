@@ -9,10 +9,10 @@ function App() {
   return (
     <>
         <NavBar></NavBar>
-        <div className="title">
-            <h1>Welcome To Sab's Portfolio</h1>
+        <div className="title container">
+            <h1>I'm Sabalan, <br></br> I'm a front-end developer</h1>
         </div>
-        <div className="about">
+        <div className="about container">
             <div className="profile">
                 <img id="profilePic" src="/src/assets/1704141184860.jpg" alt="Picture of me"></img>
                 <p>Hi, I’m Sabalan, a front-end developer with an insatiable curiosity and a talent for mastering new skills. I thrive on learning—whether it’s learning new technologies, new languages or new design patterns.

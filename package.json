@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo  && exit 1"
+  },
+  "keywords": [],
+  "author": "Sabalan Alaeiyeh",
+  "license": "ISC",
+  "description": ""
+}
