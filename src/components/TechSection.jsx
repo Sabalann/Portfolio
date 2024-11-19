@@ -87,9 +87,6 @@ export function TechSection() {
                 <TechCard title="Git" svg={git}></TechCard>
                 <TechCard title="Haskell" svg={haskell}></TechCard>
                 <TechCard title="SQLite" svg={sqlite}></TechCard>
-
-
-
             </div>
         </>
     )

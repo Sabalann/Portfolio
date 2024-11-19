@@ -11,12 +11,17 @@ p, h1, h2 {
   font-family: montserrat, sans-serif;
 }
 
+div {
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   justify-content: center;
   text-align: center;
+  background-color: #242424;
+
 }
 
 #root {
@@ -26,22 +31,24 @@ body {
   /* background: #232323; */
 }
 
-.container {
+
+
+.navBarContainer:hover {
+  opacity: 1;
 }
 
-.navBar:hover {
-  opacity: 100%;
+.navBarContainer {
+  position: fixed;
+  width: 100%;
+  justify-items: center;
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 .navBar {
-  position: fixed;
-  opacity: 0.4;
   margin: 0.5dvw;
-  transition: 0.3s;
-  width: 80%;
-  left: 9%;
-  min-height: 4dvw;
-  justify-self: center;
+  min-width: 80%;
+  min-height: 100%;
   border-radius: 60px;
   background: #2b2a2a;
   border: #272727 2px solid;
@@ -50,12 +57,16 @@ body {
   align-items: center;
   gap: 1dvw;
   box-shadow: 0 6px 20px 8px rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
 }
 
-button {
+.navBar button {
   box-shadow: 0 6px 20px 8px rgba(0, 0, 0, 0.19);
   border: #191919 2px solid;
-
+  font-size: 100%;
+  min-width: 15%;
+  text-align: center;
+  padding: 1.4dvh 0;
 }
 
 .title {
@@ -64,7 +75,6 @@ button {
   justify-content: center;
   align-content: center;
 }
-
 
 .about {
   display: grid;
@@ -141,10 +151,10 @@ button {
 
 .techCard {
   justify-items: center;
+  width: 100%;
   align-items: center;
   align-content: center;
   background-color: var(--cardBackgroundColor);
-  width: 100%;
   height: 100%;
   border-radius: 8px;
 }
@@ -156,16 +166,22 @@ button {
 }
 
 .cardsContainer {
-  justify-self: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10rem;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  grid-gap: 5rem;
+  padding: 0 30%;
+}
+
+.cardBackground {
+  position: relative;
+  transition: 0.5s ease;
+  width: 30%;
 }
 
 .card {
   position: relative;
-  width: 190px;
-  height: 254px;
+  min-height: 254px;
   background-color: var(--cardBackgroundColor);
   display: flex;
   flex-direction: column;
@@ -184,12 +200,6 @@ button {
   inherits: false;
 }
 
-.cardBackground {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s ease;
-}
 
 .cardBackground:hover {
   transform: rotate(1deg) scale(1.05);
@@ -208,7 +218,6 @@ button {
   transform: scale(1.04);
   translate: -50% -50%;
   border-radius: 8px;
-  z-index: -1;
   padding: 1px;
   animation: 10s spin linear infinite;
 }
