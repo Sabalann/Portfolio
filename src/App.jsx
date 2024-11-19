@@ -9,7 +9,7 @@ function App() {
     <>
         <NavBar></NavBar>
         <div className="title container">
-            <h1>Hi, I'm Sabalan, <br></br> I'm a front-end developer</h1>
+            <h1>Hi, I'm Sabalan <br></br> I'm a front-end developer</h1>
         </div>
         <div className="about container">
             <div className="profile">
