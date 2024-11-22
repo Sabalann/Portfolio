@@ -13,7 +13,7 @@ function App() {
         </div>
         <div className="about container">
             <div className="profile">
-                <img id="profilePic" src="/src/assets/1704141184860.jpg" alt="Picture of me"></img>
+                <img id="profilePic" src="/src/assets/mypic.jpg" alt="Picture of me"></img>
                 <p>Hi, I’m Sabalan, a front-end developer with an insatiable curiosity and a talent for mastering new skills. I thrive on learning—whether it’s learning new technologies, new languages or new design patterns.
                     What sets me apart isn’t just my technical skills but my relentless drive to understand, improve, and grow. Every challenge is an opportunity to learn, and I dive headfirst into problem-solving with the excitement of discovering something new.</p>
             </div>
