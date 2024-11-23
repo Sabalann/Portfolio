@@ -26,7 +26,7 @@ function App() {
         <div className="projects section">
             <Card title="Netflix Clone"
                   //description="For my first project with React, I decided to pick a website to clone. At this point I had read a lot of the React documentation and watched tutorials, I wanted to see how far I could get without having to design anything myself."
-                ></Card>
+                link="netflixclone.sabalan.info"></Card>
             <Card title="project" description=""></Card>
             <Card title="project" description=""></Card>
             <Card title="project" description=""></Card>

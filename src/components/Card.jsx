@@ -1,7 +1,10 @@
-export function Card({title, description}) {
+export function Card({title, description, link}) {
+    const handleClick = () => {
+        window.open(`https://${link}`, '_blank');
+    }
     return (
         <>
-            <div className="cardBackground">
+            <div className="cardBackground" onClick={handleClick}>
                 <div className="card">
                     <p className="cardHeading">{title}</p>
                     <p>{description}</p>
