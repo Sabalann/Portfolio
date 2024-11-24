@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import scriptSrc from "/finisher-header.es5.min.js?url";
+import scriptSrc from "/src/assets/finisher-header.es5.min.js?url";
 
 const AnimatedBackground = () => {
     useEffect(() => {
