@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import scriptSrc from "/finisher-header.es5.min.js?url";
 
 const AnimatedBackground = () => {
     useEffect(() => {
         const script = document.createElement("script");
-        script.src = "/finisher-header.es5.min.js";
+        script.src = scriptSrc;
         script.type = "text/javascript";
         script.onload = () => {
             new window.FinisherHeader({
@@ -46,7 +47,7 @@ const AnimatedBackground = () => {
     return (
         <div
             className="header finisher-header"
-            style={{ width: "100%", height: "100dvh", opacity: 0.7}}>
+            style={{ width: "100%", height: "100dvh", opacity: 0.7 }}>
         </div>
     );
 };
