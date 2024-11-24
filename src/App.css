@@ -6,16 +6,23 @@
   --orangeGradientBackground: conic-gradient(from var(--angle), #900C3F, #C70039, #F94C10, #F8DE22, #900C3F);
   --redGradientBackground: conic-gradient(from var(--angle), #FF204E, #A0153E, #5D0E41, #2e004d, #FF204E);
   background-color: #242424;
-
+  scroll-behavior: smooth;
 }
 
 p, h1, h2 {
   font-family: montserrat, sans-serif;
-  color: #eaeaea
+  color: #eaeaea;
 }
 
-.section {
-  margin: 0 0 20dvh 0 ;
+
+section {
+  margin: 20dvh 0 ;
+  height: 100dvh;
+  align-content: center;
+}
+
+#hero {
+  margin: 0 0 20dvh 0;
 }
 
 body {
@@ -43,6 +50,7 @@ body {
   justify-items: center;
   opacity: 0.8;
   transition: 0.3s;
+  z-index: 1;
 }
 
 .navBar {
@@ -85,14 +93,15 @@ button {
 .title button:hover {
   background: #ffffff;
   color: #1a1a1a;
-  font-size: 1.2rem;
+  transform: scale(1.1);
 }
 
 .about {
   display: grid;
   grid-template-columns: 50% 50%;
-  padding: 10em 0;
-
+  padding: 0 14em;
+  height: 100%;
+  align-content: center;
 }
 
 .profile {
@@ -182,24 +191,23 @@ button {
   display: flex;
   flex-flow: row wrap;
   grid-gap: 5rem;
-  padding: 0 30%;
+  padding: 0 5%;
 }
 
 .cardBackground {
   position: relative;
+  min-width: 30dvw;
   transition: 0.5s ease;
   width: 30%;
 }
 
 .card {
-  position: relative;
-  min-height: 254px;
-  background-color: var(--cardBackgroundColor);
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  position: relative;
+  min-height: 30dvh;
+  background-color: var(--cardBackgroundColor);
   padding: 12px;
-  gap: 12px;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 6px 20px 8px rgba(0, 0, 0, 0.19);
@@ -211,7 +219,6 @@ button {
   initial-value: 0deg;
   inherits: false;
 }
-
 
 .cardBackground:hover {
   transform: rotate(1deg) scale(1.05);
@@ -248,15 +255,53 @@ button {
   }
 }
 
-.card p:not(.heading) {
-  font-size: 14px;
-  font-weight: bold;
-  align-content: start;
-  justify-content: end;
-  justify-items: end;
+.cardContents {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.card p:first-child {
+.card p {
   color: white;
+  font-size: 1.2rem;
   font-weight: 600;
+}
+
+.cardLinks {
+  margin-top: auto;
+}
+
+.linkButton {
+  width: max-content;
+  margin: 0;
+}
+
+.contactSection {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.contactSection * {
+  display: inline;
+  padding: 10px;
+}
+
+.contactSection button {
+  margin: 0;
+}
+
+.contactSection span {
+  color: #4b00b5;
+}
+
+.divider {
+  border: none;
+  display: block;
+  border-top: 4px solid #4b00b5;
+  margin: 2rem 0;
+  width: 10%;
+  padding: 0;
+  justify-self: center;
 }
