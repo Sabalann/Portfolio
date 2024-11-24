@@ -6,12 +6,15 @@ import picture from "/src/assets/mypic.jpg";
 import {ProjectsSection} from "./components/ProjectsSection.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import fadeInEffect from "./components/FadeInEffect.jsx";
+import AnimatedBackground from "./components/AnimatedBackground.jsx";
 
 function App() {
     fadeInEffect();
   return (
     <>
         <NavBar></NavBar>
+
+        <AnimatedBackground></AnimatedBackground>
         <section id="hero" className="section">
             <div className="title section">
                 <h1>Hi, I'm Sabalan <br></br> I'm a front-end developer</h1>

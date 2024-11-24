@@ -14,6 +14,25 @@ p, h1, h2 {
   color: #eaeaea;
 }
 
+.finisher-header {
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 section {
   margin: 20dvh 0 ;
@@ -137,8 +156,7 @@ button {
   justify-content: center;
   align-content: center;
   grid-gap: 3rem;
-  padding: 0 4rem;
-}
+  }
 
 .techCardBackground {
   position: relative;
@@ -292,7 +310,7 @@ button {
 
 .contactSection button {
   margin: auto;
-  width: 4%;
+  width: 8dvw;
 }
 
 .contactSection span {
@@ -341,4 +359,164 @@ button {
 
 .section.visible {
   animation: fadeIn 1s forwards;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    padding: 0 2em;
+  }
+
+  .profile {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .techSection {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .projects {
+    flex-direction: column;
+    padding: 0 2%;
+  }
+
+  .cardBackground {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .contactSection {
+    font-size: 2rem;
+  }
+
+  .contactSection button {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .title button {
+    width: 80%;
+  }
+
+  #profilePic {
+    width: 50vw;
+    height: 50vw;
+  }
+
+
+}
+
+/* General Resets for Responsiveness */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+section {
+  margin: 20dvh 0;
+  padding: 1rem; /* Add padding to avoid content touching edges */
+}
+
+h1, h2, p {
+  word-wrap: break-word; /* Prevent text from overflowing */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Navigation Bar */
+  .navBar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Stack Sections */
+  .about, .profile, .techSection, .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Add spacing between stacked elements */
+    padding: 0 1rem; /* Ensure content doesn't touch screen edges */
+  }
+
+  /* Images */
+  #profilePic {
+    width: 50vw;
+    height: 50vw; /* Maintain square shape */
+  }
+
+  /* Cards */
+  .techCardBackground, .cardBackground {
+    width: 90%; /* Reduce width for mobile */
+    margin: 1rem auto; /* Center the cards */
+  }
+
+  .card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  /* Contact Section */
+  .contactSection {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contactSection button {
+    width: 90%; /* Full width on mobile */
+  }
+
+  /* Title Section */
+  .title {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .title button {
+    width: 100%; /* Full width on mobile */
+  }
+
+  /* Adjust Dividers */
+  .divider {
+    width: 50%; /* Shrink dividers for smaller screens */
+    margin: 1rem auto; /* Center dividers */
+  }
+}
+
+/* Smaller Screens (Portrait Phones) */
+@media (max-width: 480px) {
+  .about, .profile, .techSection, .projects {
+    padding: 0 0.5rem; /* Reduce padding */
+  }
+
+  .cardBackground {
+    width: 100%; /* Cards take full width */
+  }
+
+  .title {
+    font-size: 1rem; /* Smaller title size */
+  }
+
+  #profilePic {
+    width: 60vw; /* Slightly smaller image */
+    height: 60vw;
+  }
+
+  .contactSection {
+    font-size: 1.5rem; /* Smaller font for contact section */
+  }
+
+  .divider {
+    width: 70%; /* Adjust divider width */
+  }
 }
