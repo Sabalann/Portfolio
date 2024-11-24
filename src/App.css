@@ -283,17 +283,23 @@ button {
   font-size: 3rem;
 }
 
+
 .contactSection * {
   display: inline;
   padding: 10px;
+
 }
 
 .contactSection button {
-  margin: 0;
+  margin: auto;
+  width: 4%;
 }
 
 .contactSection span {
   color: #4b00b5;
+  display: inline-block;
+  position: relative;
+  top: 8px; /* Adjust the value as needed */
 }
 
 .divider {
@@ -301,7 +307,38 @@ button {
   display: block;
   border-top: 4px solid #4b00b5;
   margin: 2rem 0;
-  width: 10%;
   padding: 0;
   justify-self: center;
+}
+
+#divider1 {
+  width: 15%;
+}
+
+#divider2 {
+  width: 10%;
+}
+
+#divider3 {
+    width: 5%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.visible {
+  animation: fadeIn 1s forwards;
 }
