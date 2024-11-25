@@ -1,5 +1,4 @@
 import './App.css'
-import Card from './components/Card'
 import {NavBar} from "./components/NavBar.jsx";
 import {TechSection} from "./components/TechSection.jsx";
 import picture from "/src/assets/mypic.jpg";
