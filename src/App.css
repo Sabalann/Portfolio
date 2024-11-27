@@ -36,7 +36,6 @@ p, h1, h2 {
 
 
 section {
-  margin: 20dvh 0 ;
   height: 100dvh;
   align-content: center;
 }
@@ -390,7 +389,6 @@ body, html {
 }
 
 section {
-  margin: 20dvh 0;
   padding: 1rem;
 }
 
