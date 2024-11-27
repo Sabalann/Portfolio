@@ -21,7 +21,6 @@ function App() {
             </div>
         </section>
 
-
         <section id="projects" className="section">
             <ProjectsSection></ProjectsSection>
         </section>
