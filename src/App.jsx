@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css';
 import {NavBar} from "./components/NavBar.jsx";
 import {TechSection} from "./components/TechSection.jsx";
 import picture from "/src/assets/mypic.jpg";
@@ -6,6 +6,7 @@ import {ProjectsSection} from "./components/ProjectsSection.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import fadeInEffect from "./components/FadeInEffect.jsx";
 import AnimatedBackground from "./components/AnimatedBackground.jsx";
+import Intro from './components/Intro.jsx';
 
 function App() {
     fadeInEffect();
@@ -15,10 +16,7 @@ function App() {
 
         <AnimatedBackground></AnimatedBackground>
         <section id="hero" className="section">
-            <div className="title section">
-                <h1>Hi, I'm Sabalan <br></br> I'm a front-end developer</h1>
-                <a href="#projects"> <button>See More...</button></a>
-            </div>
+            <Intro> </Intro>
         </section>
 
         <section id="projects" className="section">
