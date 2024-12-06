@@ -29,9 +29,9 @@ const Intro = () => {
   const nextRole = roles[(currentRoleIndex + 1) % roles.length];
 
   return (
-    <h1 className="intro-text">
+    <h1 className="intro-text font-semibold select-none ">
       Hi, I'm Sabalan and I'm a{" "}
-      <div className="role-container">
+      <div className="role-container px-4">
         <div
           className={`roles-wrapper ${isTransitioning ? "smooth-scroll" : ""}`}
         >
