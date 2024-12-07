@@ -1,16 +1,27 @@
-import Card from "./Card.jsx";
+import React, { useEffect } from 'react';
+import Card from './Card.jsx';
+import EmblaCarousel from './EmbelaCarousel/EmblaCarousel.jsx';
+import netflixCloneSS from '../../public/netflixCloneSS.png'
 
+const OPTIONS = {}
 export function ProjectsSection() {
-    return (
-        <>
-            <div className="projects section">
-                <Card title="Netflix Clone"
-                    //description="For my first project with React, I decided to pick a website to clone. At this point I had read a lot of the React documentation and watched tutorials, I wanted to see how far I could get without having to design anything myself."
-                      liveLink="https://netflixclone.sabalan.info/" repoLink="https://github.com/Sabalann/Netflix-Clone"></Card>
-                <Card title="Coming Soon..." description=""></Card>
-                <Card title="Coming Soon..." description=""></Card>
-                <Card title="Coming Soon..." description=""></Card>
-            </div>
-        </>
-    )
+
+const SLIDES = [
+    <Card 
+            title="Netflix Clone" 
+            image={netflixCloneSS}
+            liveLink="https://netflixclone.sabalan.info/" 
+            repoLink="https://github.com/Sabalann/Netflix-Clone"/>,
+      <Card title="Pacman"></Card>
+
+]
+  return (
+    <>
+        <div>
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+        </div>
+    </>
+  )
 }
+
+export default ProjectsSection;

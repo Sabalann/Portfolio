@@ -20,9 +20,10 @@ const website = <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.
 export function Card({ title, description, liveLink, repoLink, image }) {
     return (
         <div
-            className="cardBackground"
-            style={{ backgroundImage: `url(${image})` }}>
-            <div className="card">
+            className="cardBackground aspect-video"
+            style={{  backgroundImage: `url(${image})` }}>
+            <div className="card h-full"
+                style={{  backgroundImage: `url(${image})` }}>
                     <p className="cardHeading">{title}</p>
                     <div className="cardLinks">
                         {liveLink && (
