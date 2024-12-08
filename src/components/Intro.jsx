@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 
 const roles = [
   { label: "Front-end Developer", icon: "🖌️", color: "#007BFF" },
-  { label: "Full-stack Developer", icon: "🌐", color: "#28A745" },
-  { label: "Backend Developer", icon: "⚙️", color: "#FD7E14" },
+  //{ label: "Full-stack Developer", icon: "🌐", color: "#28A745" },
+  //{ label: "Backend Developer", icon: "⚙️", color: "#FD7E14" },
   { label: "Game Developer", icon: "🕹️", color: "#6F42C1" },
   { label: "Artist", icon: "🎨", color: "#DC3545" },
+  { label: "Student", icon: "🧑‍🎓", color: "#4CAF50"},
+  { label: "Gamer", icon: "🎮", color: "#FF5722"},
 ];
 
 const Intro = () => {
@@ -31,9 +33,9 @@ const Intro = () => {
   return (
     <h1 className="intro-text font-semibold select-none ">
       Hi, I'm Sabalan and I'm a{" "}
-      <div className="role-container px-4">
+      <div className="role-container px-4 w-full min-w-max">
         <div
-          className={`roles-wrapper ${isTransitioning ? "smooth-scroll" : ""}`}
+          className={`roles-wrapper min-w-96 ${isTransitioning ? "smooth-scroll" : ""}`}
         >
           {/* Previous role */}
           <span className="role-text opacity-20 block">
@@ -41,7 +43,7 @@ const Intro = () => {
           </span>
 
           {/* Current role */}
-          <span className="role-text" style={{ color: currentRole.color }}>
+          <span className="role-text block" style={{ color: currentRole.color }}>
           {currentRole.label} {currentRole.icon} 
           </span>
 
