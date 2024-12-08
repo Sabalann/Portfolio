@@ -471,13 +471,13 @@ button:focus {
 
 .contactSection {
   font-weight: 500;
-  font-size: 3rem;
 }
-
 
 .contactSection * {
   display: inline;
   padding: 10px;
+  font-weight: 500;
+  font-size: 2rem;
 
 }
 
@@ -493,25 +493,57 @@ button:focus {
   top: 8px; /* Adjust the value as needed */
 }
 
-.divider {
-  border: none;
-  display: block;
-  border-top: 4px solid #4b00b5;
-  margin: 2rem 0;
-  padding: 0;
-  justify-self: center;
+.notification {
+  position: absolute;
+  font-size: 0.9rem;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  pointer-events: none;
 }
 
-#divider1 {
-  width: 15%;
+
+.tooltip {
+  position: relative;
+  display: inline-block;
 }
 
-#divider2 {
-  width: 10%;
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-#divider3 {
-    width: 5%;
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -637,21 +669,5 @@ h1, h2, p {
 
   .contactSection button {
     width: 30%;
-  }
-
-  #divider1 {
-    width: 50%;
-  }
-
-  #divider2 {
-    width: 30%;
-  }
-
-  #divider3 {
-    width: 10%;
-  }
-
-  divider {
-    visibility: hidden;
   }
 }
