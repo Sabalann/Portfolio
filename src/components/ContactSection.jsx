@@ -10,7 +10,7 @@ export function ContactSection() {
   };
 
   return (
-    <div className="contactSection flex flex-col">
+    <div className="contactSection flex flex-col w-max justify-self-center">
       <button className="relative" onClick={copyMail}>
       {notification && (
         <Notification message={notification} onClose={() => setNotification('')} />

@@ -402,13 +402,9 @@ button:focus {
 }
 
 
-
-.cardBackground {
+.project-card {
   height: 80%;
-  
-}
-
-.card {
+  aspect-ratio: 16/9;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -422,7 +418,7 @@ button:focus {
   transition: 0.5s ease;
 }
 
-.card::after {
+.project-card::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -431,9 +427,27 @@ button:focus {
   border-radius: 8px;
 }
 
-.card > * {
+.project-card > * {
   position: relative;
   z-index: 2;
+}
+
+.link {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed for spacing from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem; /* Adjust font size as needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Optional: Add background for better readability */
+  color: #fff; /* Ensure the text color contrasts with the background */
+  padding: 10px 20px; /* Optional: Add padding for better clickability */
+  border-radius: 5px; /* Optional: Rounded corners */
+  text-decoration: none; /* Remove underline if desired */
+  transition: background-color 0.3s ease; /* Optional: Smooth hover effect */
+}
+
+.link:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: Darken on hover */
 }
 
 
@@ -470,20 +484,18 @@ button:focus {
 }
 
 .contactSection {
-  font-weight: 500;
+  justify-content: left;
 }
 
 .contactSection * {
-  display: inline;
   padding: 10px;
+  margin: 0;
   font-weight: 500;
   font-size: 2rem;
-
 }
 
 .contactSection button {
-  margin: auto;
-  width: 8dvw;
+  width: min-content;
 }
 
 .contactSection span {

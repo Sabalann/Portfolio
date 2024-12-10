@@ -1,36 +1,35 @@
-import React, { useEffect } from 'react';
-import Card from './Card.jsx';
-import EmblaCarousel from './EmbelaCarousel/EmblaCarousel.jsx';
-import netflixCloneSS from '../../public/projectScreenshots/netflixCloneSS.jpg'
-import pacmanSS from '../../public/projectScreenshots/pacmanSS.jpg'
-import programmingLearningSS from '../../public/projectScreenshots/programmingLearningSS.jpg'
+// ProjectsSection.jsx
+import React from 'react';
+import ProjectCard from './ProjectCard.jsx';
+import projects from './Projects.jsx';
+import EmblaCarousel from './EmbelaCarousel/EmblaCarousel.jsx'; // Adjust the path if necessary
 
-const OPTIONS = {}
-export function ProjectsSection() {
+const OPTIONS = {
+    // Define your EmblaCarousel options here
+    loop: false,
+    slidesToScroll: 1,
+    // Add other options as needed
+};
 
-const SLIDES = [
-    <Card 
-            title="Netflix Clone" 
-            image={netflixCloneSS}
-            liveLink="https://netflixclone.sabalan.info/" 
-            repoLink="https://github.com/Sabalann/Netflix-Clone"/>,
-      <Card 
-            title="Pacman"
-            image={pacmanSS}
-            repoLink="https://github.com/Sabalann/PacMan-Python"/>,
-      <Card
-            title="Learning Programming App"
-            image={programmingLearningSS}
-            repoLink="https://github.com/Sabalann/Programming-Learning-Windows-App"/>,
-]
+const ProjectsSection = () => {
+    const SLIDES = projects.map((project) => (
+        <ProjectCard 
+            key={project.id}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            liveLink={project.liveLink}
+            repoLink={project.repoLink}
+            technologies={project.technologies}
+        />
+    ));
 
-  return (
-    <>
-        <div>
+    return (
+        <div className="projects-section">
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </div>
-    </>
-  )
-}
+    );
+};
 
 export default ProjectsSection;
