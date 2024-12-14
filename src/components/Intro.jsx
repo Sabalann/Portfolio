@@ -32,7 +32,7 @@ const Intro = () => {
 
   return (
     <h1 className="intro-text font-semibold select-none ">
-      Hi, I'm Sabalan and I'm a{" "}
+      <h2>Hi, I'm Sabalan and I'm a{" "}</h2>
       <div className="role-container px-4 w-full min-w-max">
         <div
           className={`roles-wrapper min-w-96 ${isTransitioning ? "smooth-scroll" : ""}`}

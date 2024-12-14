@@ -1,0 +1,18 @@
+.project-details {
+    padding: 4rem 6rem 0 6rem;
+}
+
+.details-details > div {
+    padding: 3rem 2rem;
+}
+
+.details-screenshot {
+    width: 70%;
+    justify-items: center;
+    justify-self: center;
+}
+
+.details-screenshot img {
+    width: 100%;
+    height: 100%;
+}

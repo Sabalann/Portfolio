@@ -1,6 +1,7 @@
-import React from 'react'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import React from 'react';
+import './Embla.css';
+import { DotButton, useDotButton } from './EmblaCarouselDotButton';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
 import useEmblaCarousel from 'embla-carousel-react'
 

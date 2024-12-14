@@ -25,7 +25,7 @@ const AnimatedBackground = () => {
                     },
                 },
                 colors: {
-                    background: "#1c1c1e",
+                    background: "#141414",
                     particles: ["#dc86f4", "#9008c7", "#bf22c9"],
                 },
                 blending: "none",

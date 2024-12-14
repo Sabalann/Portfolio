@@ -5,11 +5,13 @@ import ContactSection from "../ContactSection.jsx";
 import fadeInEffect from "../FadeInEffect.jsx";
 import AnimatedBackground from "../AnimatedBackground.jsx";
 import Intro from '../Intro.jsx';
+import NavBar from "../NavBar.jsx";
 
 function Home() {
     fadeInEffect();
     return (
         <>
+            <NavBar/>
             <AnimatedBackground></AnimatedBackground>
             <section id="hero" className="section">
                 <Intro> </Intro>
