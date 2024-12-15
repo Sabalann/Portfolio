@@ -2,6 +2,7 @@
 import netflixCloneSS from '../../public/projectScreenshots/netflixCloneSS.jpg';
 import pacmanSS from '../../public/projectScreenshots/pacmanSS.jpg';
 import programmingLearningSS from '../../public/projectScreenshots/programmingLearningSS.jpg';
+import shootEmUpSS from '../../public/projectScreenshots/shootEmUpSS.png';
 
 const projects = [
     {
@@ -19,7 +20,6 @@ const projects = [
         description: "This is a school project where I enhanced the classic 'Pacman' game by implementing various search algorithms. The project explores techniques like Depth First Search, Breadth First Search, A Search, and Uniform Cost Search to guide Pacman through the maze. It demonstrates how different algorithms impact pathfinding and decision-making within the game.",
         image: pacmanSS,
         technologies: ["Python"],
-        liveLink: "", // Add if available
         repoLink: "https://github.com/Sabalann/PacMan-Python"
     },
     {
@@ -28,9 +28,17 @@ const projects = [
         description: "This is a programming learning app I developed, where users control a character on a grid by writing commands. The app features an interactive environment designed to teach the basics of coding through step-by-step challenges. It includes functionality for users to input sequences of commands, execute them, and see their effects in real time. This project focuses on making programming concepts accessible and engaging.",
         image: programmingLearningSS,
         technologies: ["C#", "Windows Forms"],
-        liveLink: "", // Add if available
         repoLink: "https://github.com/Sabalann/Programming-Learning-Windows-App"
-    }
+    },
+    {
+        id:"4",
+        title: "Shoot'em Up",
+        description: "A school project where I developed a Shoot'em Up style game with only Haskell.",
+        image: shootEmUpSS,
+        technologies: ["Haskell"],
+        repoLink:"https://github.com/Sabalann/Shoot-em-Up"
+
+    },
 ];
 
 export default projects;
