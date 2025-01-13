@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { translations } from "../assets/translations";
+import { useLanguage } from "./LanguageContext";
 
 const roles = [
   { label: "Front-end Developer", icon: "🖌️", color: "#007BFF" },
@@ -13,15 +15,16 @@ const roles = [
 const Intro = () => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const {language} = useLanguage();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsTransitioning(true); // Enable transition effect
+      setIsTransitioning(true);
       setTimeout(() => {
         setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-        setIsTransitioning(false); // Disable transition effect after update
-      }, 800); // Match duration of CSS transition
-    }, 2000); // Time interval for automatic scrolling
+        setIsTransitioning(false);
+      }, 800);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -32,7 +35,7 @@ const Intro = () => {
 
   return (
     <h1 className="intro-text font-semibold select-none ">
-      <h2>Hi, I'm Sabalan and I'm a{" "}</h2>
+      <h2>{translations[language].whoAmI}{" "}</h2>
       <div className="role-container px-4 w-full min-w-max">
         <div
           className={`roles-wrapper min-w-96 ${isTransitioning ? "smooth-scroll" : ""}`}

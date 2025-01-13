@@ -47,7 +47,7 @@ const AnimatedBackground = () => {
     return (
         <div
             className="header finisher-header"
-            style={{ width: "100%", height: "100dvh", opacity: 0.7 }}>
+            style={{ width: "100%", height: "100%", opacity: 0.7 }}>
         </div>
     );
 };

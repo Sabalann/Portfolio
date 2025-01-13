@@ -2,13 +2,11 @@
 import React from 'react';
 import ProjectCard from './ProjectCard.jsx';
 import projects from './Projects.jsx';
-import EmblaCarousel from './EmbelaCarousel/EmblaCarousel.jsx'; // Adjust the path if necessary
+import EmblaCarousel from './EmbelaCarousel/EmblaCarousel.jsx';
 
 const OPTIONS = {
-    // Define your EmblaCarousel options here
     loop: false,
     slidesToScroll: 1,
-    // Add other options as needed
 };
 
 const ProjectsSection = () => {

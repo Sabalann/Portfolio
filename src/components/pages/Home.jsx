@@ -6,9 +6,15 @@ import fadeInEffect from "../FadeInEffect.jsx";
 import AnimatedBackground from "../AnimatedBackground.jsx";
 import Intro from '../Intro.jsx';
 import NavBar from "../NavBar.jsx";
+import { useLanguage } from "../LanguageContext.jsx";
+import { translations } from "../../assets/translations.js";
 
 function Home() {
+
+    const { language, toggleLanguage } = useLanguage();
+    
     fadeInEffect();
+
     return (
         <>
             <NavBar/>
@@ -25,8 +31,7 @@ function Home() {
                     <div className="about">
                         <div className="profile">
                             <img id="profilePic" src={picture} alt="Picture of me"></img>
-                            <p>Hi, I’m Sabalan, a front-end developer with an insatiable curiosity and a talent for mastering new skills. I thrive on learning—whether it’s learning new technologies, new languages or new design patterns.
-                                What sets me apart isn’t just my technical skills but my relentless drive to understand, improve, and grow.</p>
+                            <p>{translations[language].whoAmIDetailed}</p>
                         </div>
                         <TechSection></TechSection>
                     </div>
