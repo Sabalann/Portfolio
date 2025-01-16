@@ -8,7 +8,7 @@ const AnimatedBackground = () => {
         script.type = "text/javascript";
         script.onload = () => {
             new window.FinisherHeader({
-                count: 20,
+                count: 5,
                 size: {
                     min: 2,
                     max: 8,
@@ -17,16 +17,16 @@ const AnimatedBackground = () => {
                 speed: {
                     x: {
                         min: 0,
-                        max: 0.4,
+                        max: 0.2,
                     },
                     y: {
                         min: 0,
-                        max: 0.6,
+                        max: 0.2,
                     },
                 },
                 colors: {
                     background: "#141414",
-                    particles: ["#dc86f4", "#9008c7", "#bf22c9"],
+                    particles: ["#DDDDDD", "#777777", "#555555"],
                 },
                 blending: "none",
                 opacity: {

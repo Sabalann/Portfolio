@@ -28,13 +28,13 @@ function Home() {
             </section>
 
             <section id="about" className="section">
-                    <div className="about">
+                    { /* <div className="about"> */ }
                         <div className="profile">
                             <img id="profilePic" src={picture} alt="Picture of me"></img>
                             <p>{translations[language].whoAmIDetailed}</p>
                         </div>
-                        <TechSection></TechSection>
-                    </div>
+                        { /* <TechSection></TechSection> */ }
+                    { /* </div> */ }
             </section>
 
             <section id="contact" className="section">

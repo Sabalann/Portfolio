@@ -3,14 +3,12 @@ import { translations } from "../assets/translations";
 import { useLanguage } from "./LanguageContext";
 
 const roles = [
-  { label: "Front-end Developer", icon: "🖌️", color: "#007BFF" },
+  { label: "Front-end Developer", icon: "", color: "#eaeaea" },
   //{ label: "Full-stack Developer", icon: "🌐", color: "#28A745" },
   //{ label: "Backend Developer", icon: "⚙️", color: "#FD7E14" },
-  { label: "Game Developer", icon: "🕹️", color: "#6F42C1" },
-  { label: "Artist", icon: "🎨", color: "#DC3545" },
-  { label: "Student", icon: "🧑‍🎓", color: "#4CAF50"},
-  { label: "Gamer", icon: "🎮", color: "#FF5722"},
-];
+  { label: "Artist", icon: "", color: "#eaeaea" },
+  { label: "Student", icon: "", color: "#eaeaea"},
+  ];
 
 const Intro = () => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
